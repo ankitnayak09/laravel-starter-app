@@ -32,11 +32,11 @@
             <td>{{ $product->detail }}</td>
             <td>
                 <form action="{{ route('products.destroy',$product->id) }}" method="POST">
-                    <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
+                    <a class="btn" href="{{ route('products.show',$product->id) }}"><i class="iconoir-eye"></i></a>
+                    <a class="btn" href="{{ route('products.edit',$product->id) }}"><i class="iconoir-edit-pencil"></i></a>
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn" style="background-color: #ffffff;"><i class="iconoir-trash"></i></button>
                 </form>
             </td>
         </tr>
